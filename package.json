@@ -2,7 +2,7 @@
   "name": "dsh-plugin-abap-diff",
   "version": "0.1.0",
   "description": "DeepSeek Harness (DSH) 插件：为 abap-adt MCP 提供类 Git 的只读 ABAP 代码变更追踪、本地影子仓库与 Web UI 分栏 Diff 对比面板。",
-  "icon": "assets/icon.svg",
+  "icon": "assets/icon.png",
   "author": "WyankinzZ <1505228414@qq.com>",
   "license": "MIT",
   "keywords": [
@@ -44,6 +44,7 @@
   "files": [
     "lib",
     "src",
+    "assets/icon.png",
     "assets/icon.svg",
     "cordis.patch.yml",
     "README.md",
@@ -72,10 +73,10 @@
     }
   },
   "peerDependencies": {
-    "@deepseek-ai/cordis": "^4.0.0",
-    "@deepseek-ai/dsh-client-ui-primitives": "^0.2.0-rc.1",
-    "@deepseek-ai/dsh-client-ui-slots": "^0.2.0-rc.1",
-    "@deepseek-ai/dsh-host-webserver": "^0.2.0-rc.1",
+    "@deepseek-ai/cordis": ">=4.0.0-rc.1 <4.1.0 || >=4.1.0-alpha.1 <5.0.0-0",
+    "@deepseek-ai/dsh-client-ui-primitives": ">=0.2.0-rc.1 <0.2.1 || >=0.2.1-rc.1 <0.2.2 || >=0.2.2-rc.1 <0.2.3 || >=0.2.3-alpha.1 <0.3.0-0",
+    "@deepseek-ai/dsh-client-ui-slots": ">=0.2.0-rc.1 <0.2.1 || >=0.2.1-rc.1 <0.2.2 || >=0.2.2-rc.1 <0.2.3 || >=0.2.3-alpha.1 <0.3.0-0",
+    "@deepseek-ai/dsh-host-webserver": ">=0.2.0-rc.1 <0.2.1 || >=0.2.1-rc.1 <0.2.2 || >=0.2.2-rc.1 <0.2.3 || >=0.2.3-alpha.1 <0.3.0-0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
