@@ -1,0 +1,92 @@
+{
+  "name": "dsh-plugin-abap-diff",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness (DSH) 插件：为 abap-adt MCP 提供类 Git 的只读 ABAP 代码变更追踪、本地影子仓库与 Web UI 分栏 Diff 对比面板。",
+  "icon": "assets/icon.svg",
+  "author": "WyankinzZ <1505228414@qq.com>",
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "abap",
+    "sap",
+    "adt",
+    "diff",
+    "git",
+    "mcp",
+    "cordis"
+  ],
+  "homepage": "https://github.com/WyankinzZ/dsh-plugin-abap-diff#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WyankinzZ/dsh-plugin-abap-diff.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WyankinzZ/dsh-plugin-abap-diff/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./assets/*": "./assets/*",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "src",
+    "assets/icon.svg",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test src/**/*.test.ts"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "compatibility": {
+      "dshReleases": {
+        "0.2.2-rc.1": "compatible"
+      }
+    },
+    "client": {
+      "platform": "web",
+      "inject": []
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.0",
+    "@deepseek-ai/dsh-client-ui-primitives": "^0.2.0-rc.1",
+    "@deepseek-ai/dsh-client-ui-slots": "^0.2.0-rc.1",
+    "@deepseek-ai/dsh-host-webserver": "^0.2.0-rc.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "dependencies": {
+    "diff": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/diff": "^7.0.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^18.2.0",
+    "esbuild": "^0.25.0",
+    "typescript": "^5.8.0"
+  }
+}

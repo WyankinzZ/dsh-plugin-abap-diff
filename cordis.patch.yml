@@ -1,0 +1,3 @@
+- insert:
+    - id: dsh-plugin-abap-diff
+      name: 'dsh-plugin-abap-diff'
